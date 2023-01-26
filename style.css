@@ -1,0 +1,87 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    color: hsl(238, 29%, 16%);
+}
+
+.card {
+    margin: 140px auto 20px;
+    position: relative;
+    text-align: center;
+    padding: 110px 25px 25px 25px;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 20px;
+    background-color: white;
+    min-width: 300px;
+    box-shadow: 1px 1px 10px black;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+.main-img {
+    display: block;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    width: 250px;  
+}
+
+.panel {
+    font-size: 14px;
+    width: 300px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.accordion img {
+    object-fit: contain;
+}
+
+.accordion:active {
+    color: hsl(14, 88%, 65%);
+}
+
+@media only screen and (min-width: 600px) {
+    .main-img {
+        left: -50px;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+    }
+
+    .card {
+        display: flex;
+        justify-content: right;
+        max-width: 700px;
+        padding: 30px;
+    }
+
+    .panel {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .fuq {
+        width: 350px;
+    }
+  }
